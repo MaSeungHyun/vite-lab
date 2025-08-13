@@ -1,5 +1,7 @@
 "use strict";
-const electron = require("electron");
+
+import electron from "electron";
+
 electron.contextBridge.exposeInMainWorld("ipcRenderer", {
   on(...args) {
     const [channel, listener] = args;
